@@ -1,0 +1,137 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tema padrão (dark) */
+:root {
+    --bg: #141414;
+    --text: #fff;
+    --subtext: #808080;
+    --card: #1f1f1f;
+    --border: rgba(255, 255, 255, 0);
+}
+
+.light {
+    --bg: #f3f4f6;
+    --text: #111;
+    --subtext: #555;
+    --card: #fff;
+    --border: rgba(0, 0, 0, 0.1);
+}
+
+/* Body */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Header */
+header {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.theme-toggle {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Main */
+main {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* GRID RESPONSIVO */
+.profiles {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    background: var(--card);
+    padding: 12px;
+    border-radius: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border);
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Image */
+.profile img {
+    width: 100%;
+    max-width: 160px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.profile:hover img {
+    border: 3px solid #fff;
+}
+
+/* Name */
+.profile figcaption {
+    margin-top: 12px;
+    color: #808080;
+    transition: color 0.3s;
+}
+
+.profile:hover figcaption {
+    color: #fff;
+}
+
+/* RESPONSIVIDADE EXTRA */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
