@@ -35,10 +35,10 @@ function getAllProfileImages() {
 // 3. Pronto! A imagem aparecerá automaticamente na página de perfis
 
 const DEFAULT_PROFILES = [
-  {name: 'Vitor', image: '../../perfis/perfil-1.png'},
-  {name: 'Gabriel', image: '../../perfis/perfil-2.png'},
-  {name: 'Gui', image: '../../perfis/perfil-3.png'},
-  {name: 'Maria', image: '../../perfis/perfil-4.png'}
+  {name: 'ADM', image: '../../perfis/perfil-1.png'},
+  {name: 'Gui', image: '../../perfis/perfil-9.png'},
+  {name: 'VT', image: '../../perfis/perfil-3.png'},
+  {name: 'Ale', image: '../../perfis/perfil-2.png'}
 ];
 
 // Lista de imagens que o usuário pode escolher ao criar um perfil.
