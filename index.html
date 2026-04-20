@@ -3,95 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DevFlix</title>
+    <meta http-equiv="refresh" content="0; url=pages/perfis/index.html">
 </head>
 <body>
-
-    <header>
-        <h1>Quem está assistindo?</h1>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">Modo Claro</button>
-    </header>
-
-    <main>
-        <ul class="profiles">
-
-            <li class="profile" data-name="Vitor">
-                <figure>
-                    <img src="assets/perfil-carro.jpg" alt="Perfil Vitor">
-                    <figcaption>Vitor</figcaption>
-                </figure>
-            </li>
-
-            <li class="profile" data-name="Gabriel">
-                <figure>
-                    <img src="assets/perfil-2.jpg" alt="Perfil Gabriel">
-                    <figcaption>Gabriel</figcaption>
-                </figure>
-            </li>
-
-            <li class="profile" data-name="Ana">
-                <figure>
-                    <img src="assets/perfil-3.jpg" alt="Perfil Ana">
-                    <figcaption>Ana</figcaption>
-                </figure>
-            </li>
-
-            <li class="profile" data-name="Maria">
-                <figure>
-                    <img src="assets/perfil-4.jpg" alt="Perfil Maria">
-                    <figcaption>Maria</figcaption>
-                </figure>
-            </li>
-
-        </ul>
-    </main>
-
-    <script>
-        const body = document.body;
-
-        // lógica de navegação para o catálogo
-        document.querySelectorAll('.profile').forEach(profile => {
-            profile.style.cursor = 'pointer';
-            profile.addEventListener('click', () => {
-                const nome = profile.dataset.name || profile.querySelector('figcaption')?.textContent || 'Usuário';
-                const imagem = profile.querySelector('img')?.src || '';
-                localStorage.setItem('perfilAtivoNome', nome);
-                localStorage.setItem('perfilAtivoImagem', imagem);
-                window.location.href = 'catalogo/catalogo.html';
-            });
-        });
-
-        const toggleBtn = document.getElementById('theme-toggle');
-
-        function applyTheme(theme) {
-            if (theme === 'light') {
-                body.classList.add('light');
-                toggleBtn.textContent = 'Modo Escuro';
-            } else {
-                body.classList.remove('light');
-                toggleBtn.textContent = 'Modo Claro';
-            }
-            localStorage.setItem('netflix-theme', theme);
-        }
-
-        function initTheme() {
-            const savedTheme = localStorage.getItem('netflix-theme');
-            const defaultTheme = savedTheme || 'dark';
-            applyTheme(defaultTheme);
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            const isLight = body.classList.contains('light');
-            applyTheme(isLight ? 'dark' : 'light');
-        });
-
-        initTheme();
-    </script>
-
-
-    <script src="js/index.js"></script>
-
-
+    <p>Redirecionando para a página de perfis... <a href="pages/perfis/index.html">Clique aqui se não redirecionar.</a></p>
 </body>
 </html>

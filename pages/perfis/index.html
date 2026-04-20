@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFlix</title>
+    <link rel="stylesheet" href="../../styles/perfis.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quem está assistindo?</h1>
+        <div class="header-actions">
+            <button id="add-profile" class="btn-action">+ Novo perfil</button>
+            <button id="manage-profiles" class="btn-action">Gerenciar perfis</button>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">Modo Claro</button>
+        </div>
+    </header>
+
+    <main>
+        <ul class="profiles" id="profiles-list"></ul>
+    </main>
+
+    <div class="modal hidden" id="profile-modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h2 id="modal-title">Criar perfil</h2>
+            <label for="profile-name">Nome:</label>
+            <input type="text" id="profile-name" placeholder="Digite o nome" required>
+
+            <label>Escolha uma imagem:</label>
+            <div class="image-options" id="image-options">
+                <!-- Imagens serão inseridas dinamicamente -->
+            </div>
+
+            <div class="modal-buttons">
+                <button id="save-profile" class="btn-primary">Salvar</button>
+                <button id="cancel-profile" class="btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/perfis.js"></script>
+
+</body>
+</html>
