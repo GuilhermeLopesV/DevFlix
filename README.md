@@ -1,115 +1,140 @@
-# DevFlix - Projeto de Streaming
+# 🎬 DevFlix - Projeto de Streaming
 
-Olá! Este é o DevFlix, um projeto de streaming feito com HTML, CSS e JavaScript. É como uma versão simples do Netflix, mas feita por desenvolvedores para desenvolvedores.
+O **DevFlix** é um projeto de streaming inspirado em plataformas como a Netflix, desenvolvido com foco em praticar **front-end e desenvolvimento web** com uma abordagem prática e hands-on.
 
-## Como funciona o projeto
+Este projeto foi criado durante meus estudos em um curso de front-end da Alura, com o objetivo de aplicar na prática conceitos de **HTML, CSS e JavaScript**, além de melhorar minha organização de código, construção de interfaces interativas e implementação de features escaláveis.
 
-O DevFlix tem duas páginas principais:
+---
 
-### 1. Página de Perfis (`pages/perfis/index.html`)
-- Mostra uma lista de perfis para escolher
-- Você pode criar novos perfis ou editar os existentes
-- Tem um botão para mudar entre tema claro e escuro
-- Quando clica em um perfil, vai para o catálogo
+## 🚀 Objetivo do Projeto
 
-### 2. Página do Catálogo (`pages/catalogo/index.html`)
-- Mostra carrosséis de filmes e séries organizados por categoria
-- Cada filme/série tem uma capa que vira vídeo quando passa o mouse
-- Mostra informações como pontuação, duração e botões de ação
-- Também tem controle de tema claro/escuro
+* Praticar desenvolvimento front-end na prática
+* Trabalhar com manipulação do DOM
+* Criar interfaces modernas e responsivas
+* Simular uma aplicação real de streaming
+* Evoluir na organização de projetos
 
-## Estrutura do projeto
+---
+
+## 🧠 O que aprendi
+
+Durante o desenvolvimento do DevFlix, pratiquei e aprofundei conhecimentos em:
+
+* **HTML**: Estruturação semântica de páginas
+* **CSS**: Layout responsivo, animações suaves, tema claro/escuro
+* **JavaScript**: Manipulação avançada do DOM, eventos, programação orientada a objetos
+* **Persistência de dados**: Uso de **LocalStorage** para manter estado entre sessões
+* **Modularização**: Organização de código em módulos reutilizáveis
+* **Componentes reutilizáveis**: Padrão de design para criar componentes escaláveis
+* **APIs externas**: Integração com YouTube API para reprodução de vídeos
+
+Também utilizei ferramentas de apoio, como IA, para otimizar partes do desenvolvimento e aprendizado.
+
+---
+
+## 🖥️ Funcionalidades
+
+* 🎭 Sistema de múltiplos perfis
+* 🌙/☀️ Alternância entre tema claro e escuro
+* 🎬 Catálogo com filmes e séries organizados por categorias
+* ▶️ Pré-visualização de vídeos ao passar o mouse
+* 💾 Persistência de dados com LocalStorage
+* 📱 Layout responsivo
+* 🎨 Interface com animações suaves
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```
 Projeto Netflix/
-├── assets/                    # Imagens e recursos visuais
-├── pages/                     # Páginas HTML organizadas
-│   ├── perfis/               # Página de seleção de perfis
-│   ├── catalogo/             # Página do catálogo de filmes
+├── assets/                    # Imagens, ícones e recursos estáticos
+├── pages/                     # Páginas do projeto
+│   ├── perfis/               # Página de seleção/criação de perfis
+│   ├── catalogo/             # Página principal com catálogo
 │   └── error/                # Página de erro
-├── scripts/                   # JavaScript organizado
-│   ├── perfis.js             # Lógica da página de perfis
-│   ├── catalogo.js           # Lógica da página do catálogo
-│   ├── profile-images.js     # ← GERENCIADOR DE IMAGENS DOS PERFIS
-│   └── catalog/              # Scripts específicos do catálogo
+├── scripts/                   # Arquivos JavaScript
+│   ├── perfis.js             # Lógica de perfis
+│   ├── catalogo.js           # Lógica da página de catálogo
+│   └── catalog/              # Módulos do catálogo
 │       ├── data.js           # Dados dos filmes/séries
-│       ├── utils.js          # Funções auxiliares
+│       ├── utils.js          # Funções utilitárias
 │       └── components/       # Componentes reutilizáveis
-│           ├── Carousel.js   # Carrosséis de filmes
-│           └── Card.js       # Cards individuais
-├── styles/                    # CSS organizado
-│   ├── perfis.css            # Estilos da página de perfis
-│   └── catalogo.css          # Estilos da página do catálogo
-├── perfis/                    # Pasta com imagens dos perfis
-│   ├── perfil-carro.jpg      # Imagens dos perfis
-│   ├── perfil-2.jpg
-│   ├── perfil-3.jpg
-│   ├── perfil-novo.png
-│   └── COMO-ADICIONAR-IMAGENS.md  # ← INSTRUÇÕES PARA ADICIONAR IMAGENS
-├── index.html                # Página inicial (redireciona)
-├── error.html                # Página de erro (redireciona)
-└── README.md                 # Este arquivo
+│           ├── Carousel.js   # Carrossel de conteúdo
+│           └── Card.js       # Card de filme/série
+├── styles/                    # Arquivos CSS
+│   ├── catalogo.css
+│   ├── perfis.css
+│   └── global.css
+├── perfis/                    # Pasta com imagens de perfis
+├── index.html                # Página inicial
+├── error.html                # Página de erro
+└── README.md
 ```
 
-## Como usar
+---
 
-1. Abra o arquivo `index.html` no navegador
-2. Ele vai te levar para a página de perfis
-3. Escolha um perfil ou crie um novo
-4. Clique no perfil para ir ao catálogo
-5. Navegue pelos filmes e séries
-6. Use o botão "Modo Claro" para mudar o tema
+## ▶️ Como executar
 
-## Adicionando novas imagens aos perfis
+### Pré-requisitos
+* Navegador web moderno (Chrome, Firefox, Edge, Safari)
+* Editor de código (opcional, para fazer modificações)
 
-Não quer editar código toda vez que adicionar uma imagem? Agora é fácil!
+### Passos para rodar
 
-### Método Mais Fácil (Recomendado):
-1. **Coloque sua imagem** na pasta `perfis/`
-2. **Abra** `scripts/profile-images.js`
-3. **Adicione** o caminho na lista `perfisImages`
-4. **Pronto!** A imagem aparece automaticamente
+1. **Clone o repositório**
+   ```bash
+   git clone <url-do-repositorio>
+   cd "Projeto Netflix"
+   ```
 
-**Exemplo:**
-```javascript
-export const perfisImages = [
-  '../../perfis/perfil-carro.jpg',
-  '../../perfis/perfil-2.jpg',
-  '../../perfis/perfil-3.jpg',
-  '../../perfis/perfil-novo.png',
-  '../../perfis/minha-nova-imagem.jpg'  // ← SUA IMAGEM AQUI
-];
-```
+2. **Abra o arquivo principal**
+   - Abra o arquivo `index.html` diretamente no seu navegador
+   - Ou use um servidor local (por exemplo: Live Server no VS Code)
 
-### Arquivo de Ajuda:
-Também tem o arquivo `perfis/COMO-ADICIONAR-IMAGENS.md` com instruções detalhadas!
+3. **Use a aplicação**
+   * Crie ou selecione um perfil
+   * Navegue pelo catálogo de filmes e séries
+   * Clique em um item para ver mais detalhes
+   * Aproveite as animações e tema claro/escuro
 
-## Tecnologias usadas
+---
 
-- **HTML**: Estrutura das páginas
-- **CSS**: Estilos e animações
-- **JavaScript**: Lógica e interatividade
-- **LocalStorage**: Salvar perfis e tema
-- **YouTube API**: Vídeos nos cards
+## 🛠️ Tecnologias Utilizadas
 
-## Funcionalidades legais
+* HTML
+* CSS
+* JavaScript
+* LocalStorage
+* YouTube API
 
-- 🎭 Múltiplos perfis
-- 🌙/☀️ Tema claro e escuro
-- 🎬 Pré-visualização de vídeos
-- 📱 Design responsivo
-- 💾 Dados salvos no navegador
-- 🎨 Animações suaves
-- 🖼️ Sistema fácil de adicionar imagens (só 3 passos!)
+---
 
-## Como contribuir
+## 📌 Possíveis melhorias
 
-Se quiser melhorar o projeto:
+* 🔌 Integração com API real de filmes (The Movie Database - TMDb)
+* 🔐 Sistema de login/autenticação com backend
+* ♿ Melhorias na acessibilidade (WCAG)
+* ♻️ Refatoração de componentes com padrões modernos
+* 🌐 Deploy online (GitHub Pages, Vercel ou Netlify)
+* 🔍 Barra de busca funcional
+* ⭐ Sistema de avaliação e favoritos
+* 📱 Progressive Web App (PWA)
 
-1. Organize melhor o código
-2. Adicione mais filmes/séries
-3. Melhore o design
-4. Corrija bugs
-5. Adicione novas funcionalidades
+---
 
-Divirta-se codando! 🚀
+## 👨‍💻 Autor
+
+Desenvolvido como projeto de aprendizagem durante curso de front-end.
+
+---
+
+## 📜 Licença
+
+Este projeto é de código aberto e pode ser utilizado livremente para fins educacionais e pessoais.
+
+---
+
+## 💡 Considerações
+
+Este projeto faz parte da minha evolução como desenvolvedor e representa minha prática com aplicações front-end reais.
